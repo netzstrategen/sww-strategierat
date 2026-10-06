@@ -70,7 +70,19 @@ Einmalige Einrichtung durch die Entwicklung:
 4. **Auto-Deploy** bei Push auf `main` aktivieren. Optional Staging aus `development`.
 5. **Proxy-Logs:** Für diese Anwendung keine Zugriffsprotokolle im Coolify-Proxy (Traefik/Caddy) aktivieren. Die Datenschutzerklärung sagt zu, dass keine Server-Protokolle geführt werden.
 
-Keine Umgebungsvariablen nötig.
+### Zugangsschutz bis zum Livegang
+
+Solange die Seite nicht öffentlich sein soll, schützt nginx sie mit HTTP Basic Auth (wie die netzstrategen-Staging-Seiten). Gesteuert wird das ausschließlich über zwei Umgebungsvariablen in Coolify:
+
+| Variable | Wert |
+| --- | --- |
+| `BASIC_AUTH_USER` | Benutzername |
+| `BASIC_AUTH_PASSWORD` | Passwort (in Coolify als *secret* markieren) |
+
+- Sind beide gesetzt, verlangt die Seite beim Aufruf Zugangsdaten und sendet `X-Robots-Tag: noindex, nofollow`.
+- Fehlt eine der beiden, ist die Seite öffentlich.
+- **Zum Livegang:** beide Variablen in Coolify löschen und neu deployen. Kein Code-Change nötig.
+- Zugangsdaten stehen nie im Repository. Erzeugt wird die Passwortdatei beim Containerstart von `docker/40-basic-auth.sh`.
 
 ### DNS bei Host Europe
 

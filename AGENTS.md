@@ -26,6 +26,7 @@ These come from the published privacy policy and the council's language rules. B
 3. **Keep the CSP strict.** `script-src 'self'`. Put scripts in `public/js/` and load them with `<script is:inline src>`; never inline JavaScript.
 4. **Beschlossene Texte are fixed.** The Leitbild (`src/pages/leitbild.astro`) and the Satzung (`src/pages/satzung.astro`) reproduce the wording adopted on 28 September 2026. Change them only when the council has adopted a new version (§ 10 Abs. 4 Satzung), and swap the PDF in `public/downloads/` in the same PR.
 5. **Members data lives in `src/data/gremium.json` only.** Counts and the quota bar on the start page are computed from it. Update `stand` when the list changes.
+6. **Pre-launch password gate only via env vars.** `BASIC_AUTH_USER` and `BASIC_AUTH_PASSWORD` in Coolify switch HTTP basic auth on (`docker/40-basic-auth.sh`). Never commit credentials or an `.htpasswd`.
 
 ## Language rules (German copy)
 
