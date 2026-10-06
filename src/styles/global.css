@@ -171,7 +171,7 @@ td.nm{font-weight:700;color:var(--ink);white-space:nowrap}
 .satz{display:grid;grid-template-columns:260px minmax(0,1fr);gap:56px;align-items:start}
 .toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}
 .toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;font-size:15px;line-height:22px}
-.toc a{display:block;padding:5px 0;color:var(--text);text-decoration:none}
+.toc a{display:grid;grid-template-columns:3em 1fr;padding:5px 0;color:var(--text);text-decoration:none}
 .toc a:hover{color:var(--accent)}
 .tn{display:inline-block;min-width:3em;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
 .para{padding-block:28px;border-bottom:1px solid var(--line);scroll-margin-top:110px;max-width:44em}
