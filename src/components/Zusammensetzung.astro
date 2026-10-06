@@ -1,0 +1,19 @@
+---
+import gremium from '../data/gremium.json';
+const count = (pred: (g: string) => boolean) =>
+  gremium.gruppen.filter((g) => pred(g.gruppe)).reduce((n, g) => n + g.mitglieder.length, 0);
+const w = count((g) => g === 'Wirtschaft');
+const s = count((g) => g === 'Wissenschaft');
+const k = count((g) => g !== 'Wirtschaft' && g !== 'Wissenschaft');
+const total = w + s + k;
+const pct = (x: number) => ((x / total) * 100).toFixed(1);
+const de = (x: number) => pct(x).replace('.', ',');
+---
+<div class="stack" role="img" aria-label={`Wirtschaft ${w} Mitglieder, ${de(w)} Prozent; Wissenschaft ${s}, ${de(s)} Prozent; Kammern, Verbände, Zivilgesellschaften ${k}, ${de(k)} Prozent`}>
+  <div class="s1" style={`width:${pct(w)}%`}>{w}</div><div class="s2" style={`width:${pct(s)}%`}>{s}</div><div class="s3" style={`width:${pct(k)}%`}>{k}</div>
+</div>
+<div class="legend">
+  <span style="--c:var(--accent)">Wirtschaft <b>{w} · {de(w)}&nbsp;%</b></span>
+  <span style="--c:var(--bar-2)">Wissenschaft <b>{s} · {de(s)}&nbsp;%</b></span>
+  <span style="--c:var(--bar-3)">Kammern, Verbände, Zivilgesellschaften <b>{k} · {de(k)}&nbsp;%</b></span>
+</div>

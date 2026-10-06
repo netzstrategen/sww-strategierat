@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import gremium from '../data/gremium.json';
+const praes = new Set(gremium.praesidium.map((p) => p.name));
+---
+<Base title={"Gremium"} description={"Mitglieder, Präsidium und Gäste des Strategierats Wirtschaft & Wissenschaft Karlsruhe sowie Kontakt für Presse- und Kontaktanfragen."}>
+  <section class="phead inv"><div class="wrap"><p class="over">Gremium</p><h1>Wie die Runde aufgebaut ist</h1><p class="lead">27 Entscheidungsträgerinnen und Entscheidungsträger aus Wirtschaft, Wissenschaft und gesellschaftlichen Institutionen. Stand: {gremium.stand}.</p></div></section>
+  <section class="band"><div class="wrap">
+    <div class="shead"><p class="over">Stimmberechtigte Mitglieder · 27</p><h2>Mitglieder nach Gruppen</h2><p class="lead">Innerhalb jeder Gruppe alphabetisch nach Nachnamen. Zur Wirtschaft zählen 17 Mitglieder, darunter die Verantwortlichen städtisch getragener Unternehmen (§&nbsp;4 Abs.&nbsp;2).</p></div>
+    {gremium.gruppen.map((g) => (
+      <>
+        <h3 class="gh">{g.gruppe}{g.unter && <span> · {g.unter}</span>} <span class="count">{g.mitglieder.length}</span></h3>
+        <div class="tw"><table><thead><tr><th scope="col">Name</th><th scope="col">{g.spalte}</th><th scope="col">Funktion</th></tr></thead><tbody>
+          {g.mitglieder.map((m) => <tr><td class="nm">{m.name}{praes.has(m.name) && <span class="chip">Präsidium</span>}</td><td>{m.organisation}</td><td>{m.funktion}</td></tr>)}
+        </tbody></table></div>
+      </>
+    ))}
+    <div class="shead" style="margin-top:24px"><p class="over">Gäste · 9</p><h2>Gäste des Rats</h2><p class="lead">Gäste haben alle Rechte mit Ausnahme des Stimmrechts (§&nbsp;4 Abs.&nbsp;6). Oberbürgermeister und Wirtschaftsbürgermeisterin stehen an erster Stelle, danach alphabetisch.</p></div>
+    <div class="tw"><table><thead><tr><th scope="col">Name</th><th scope="col">Institution</th><th scope="col">Funktion</th></tr></thead><tbody>{gremium.gaeste.map((m) => <tr><td class="nm">{m.name}</td><td>{m.institution}</td><td>{m.funktion}</td></tr>)}</tbody></table></div>
+  </div></section>
+  <section class="band" id="kontakt"><div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="over">Presse und Kontakt</p>
+        <h2>Anfragen an den Rat</h2>
+        <p class="lead">Presse- und Kontaktanfragen beantwortet das Präsidium, das den Rat nach außen vertritt (§&nbsp;9 Abs.&nbsp;4). Schreiben Sie uns gern eine E&#8209;Mail.</p>
+      </div>
+      <div class="mailbox">
+        <p class="cap">E-Mail</p>
+        <p class="mail"><a id="mail-link" href="mailto:kontakt@strategierat-karlsruhe.de">kontakt@strategierat-karlsruhe.de</a></p>
+        <button type="button" class="copy" id="mail-copy">Adresse kopieren</button>
+      </div>
+    </div>
+  </div></section>
+
+<script is:inline src="/js/copy-mail.js" defer></script>
+</Base>
