@@ -1,0 +1,62 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string }
+const SITE = 'Strategierat Karlsruhe';
+const { title, description = 'Der Strategierat Wirtschaft & Wissenschaft Karlsruhe: 27 Entscheidungsträgerinnen und Entscheidungsträger aus Wirtschaft, Wissenschaft und gesellschaftlichen Institutionen beraten sich mit der Stadtspitze.' } = Astro.props;
+const fullTitle = title ? `${title} · ${SITE}` : SITE;
+const path = Astro.url.pathname;
+const current = (href: string) => (href === path ? 'page' : undefined);
+const canonical = new URL(path, Astro.site);
+const stand = '30.09.2026';
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/Caladea-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Carlito-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="de_DE" />
+  </head>
+  <body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Strategierat Wirtschaft &amp; Wissenschaft Karlsruhe, zur Startseite">
+      <img class="logo-l" width="199" height="48" src="/logo-hell.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft Karlsruhe">
+      <img class="logo-d" width="199" height="48" src="/logo-dunkel.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft Karlsruhe">
+    </a>
+    <nav class="main" aria-label="Hauptnavigation"><ul>
+      <li><a href="/" aria-current={current("/")}>Der Rat</a></li>
+      <li><a href="/leitbild/" aria-current={current("/leitbild/")}>Leitbild</a></li>
+      <li><a href="/satzung/" aria-current={current("/satzung/")}>Satzung</a></li>
+      <li><a href="/gremium/" aria-current={current("/gremium/")}>Gremium</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+  <slot />
+</main>
+
+<footer class="foot inv">
+  <div class="wrap">
+    <div>
+      <img width="232" height="56" src="/logo-dunkel.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft Karlsruhe">
+      <p class="cap">strategierat-karlsruhe.de · Stand: {stand}</p>
+    </div>
+    <ul>
+      <li><a href="/leitbild/">Leitbild</a></li><li><a href="/satzung/">Satzung</a></li><li><a href="/gremium/">Gremium</a></li>
+      <li><a href="/impressum/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+  </body>
+</html>

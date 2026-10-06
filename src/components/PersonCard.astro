@@ -1,0 +1,14 @@
+---
+interface Props { name: string; role: string; lines: string[] }
+const { name, role, lines } = Astro.props;
+const parts = name.split(' ');
+const initials = parts[0][0] + parts[parts.length - 1][0];
+---
+<article class="person">
+  <div class="mono" aria-hidden="true">{initials}</div>
+  <div class="pbody">
+    <p class="role">{role}</p>
+    <h3>{name}</h3>
+    <p class="org">{lines.map((l, i) => <>{i > 0 && <br />}{l}</>)}</p>
+  </div>
+</article>

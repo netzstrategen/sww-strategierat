@@ -1,0 +1,264 @@
+{
+  "gruppen": [
+    {
+      "gruppe": "Wirtschaft",
+      "unter": "Privatwirtschaft",
+      "spalte": "Unternehmen",
+      "mitglieder": [
+        {
+          "name": "Sebastian Ackermann",
+          "organisation": "EnBW AG",
+          "funktion": "Leiter Kommunikation &amp; Marke"
+        },
+        {
+          "name": "Lutz Boden",
+          "organisation": "Sparkasse Karlsruhe",
+          "funktion": "Vorstandsmitglied"
+        },
+        {
+          "name": "Corona Feederle",
+          "organisation": "feco-Feederle GmbH",
+          "funktion": "Geschäftsführerin"
+        },
+        {
+          "name": "Marcus Fränkle",
+          "organisation": "Der Blaue Reiter",
+          "funktion": "Geschäftsführer"
+        },
+        {
+          "name": "André Hellmann",
+          "organisation": "netzstrategen GmbH",
+          "funktion": "Geschäftsführer"
+        },
+        {
+          "name": "Martin Hubschneider",
+          "organisation": "CAS Software AG",
+          "funktion": "Vorstandsvorsitzender"
+        },
+        {
+          "name": "Matthias Kreibich",
+          "organisation": "BGV Badische Versicherungen",
+          "funktion": "Vorstandsvorsitzender"
+        },
+        {
+          "name": "Andreas Krobjilowski",
+          "organisation": "MiRO GmbH &amp; Co. KG",
+          "funktion": "CEO"
+        },
+        {
+          "name": "Joachim Kugler",
+          "organisation": "Siemens Energy AG",
+          "funktion": "Repräsentant Süddeutschland"
+        },
+        {
+          "name": "Dorothee Scheidtweiler",
+          "organisation": "Hatz Moninger Brauhaus GmbH",
+          "funktion": "Geschäftsführerin"
+        },
+        {
+          "name": "Dirk Seitz",
+          "organisation": "Aluplast GmbH",
+          "funktion": "Geschäftsführer"
+        },
+        {
+          "name": "Andreas Thorwarth",
+          "organisation": "Volksbank pur eG",
+          "funktion": "Vorstandsmitglied"
+        },
+        {
+          "name": "Uta Wanner",
+          "organisation": "Dr. Willmar Schwabe GmbH &amp; Co. KG",
+          "funktion": "Leiterin Unternehmenskommunikation"
+        },
+        {
+          "name": "Christian Welling",
+          "organisation": "Graf Hardenberg-Gruppe Karlsruhe",
+          "funktion": "Geschäftsführer"
+        }
+      ]
+    },
+    {
+      "gruppe": "Wirtschaft",
+      "unter": "Städtische Gesellschaften",
+      "spalte": "Gesellschaft",
+      "mitglieder": [
+        {
+          "name": "Michael Homann",
+          "organisation": "Stadtwerke Karlsruhe GmbH",
+          "funktion": "Geschäftsführer"
+        },
+        {
+          "name": "Martin Wacker",
+          "organisation": "Karlsruhe Marketing und Event GmbH (KME)",
+          "funktion": "Geschäftsführer"
+        },
+        {
+          "name": "Britta Wirtz",
+          "organisation": "Messe Karlsruhe",
+          "funktion": "Geschäftsführerin"
+        }
+      ]
+    },
+    {
+      "gruppe": "Wissenschaft",
+      "unter": null,
+      "spalte": "Einrichtung",
+      "mitglieder": [
+        {
+          "name": "Frank Artinger",
+          "organisation": "MWK Baden-Württemberg",
+          "funktion": "Sonderbeauftragter MINT-Fachkräfte"
+        },
+        {
+          "name": "Rose Marie Beck",
+          "organisation": "Hochschule Karlsruhe (H-KA)",
+          "funktion": "Rektorin"
+        },
+        {
+          "name": "Thomas Hirth",
+          "organisation": "Karlsruher Institut für Technologie (KIT)",
+          "funktion": "Vizepräsident"
+        },
+        {
+          "name": "Karsten Pinkwart",
+          "organisation": "Fraunhofer ICT",
+          "funktion": "Stellvertretender Bereichsleiter"
+        },
+        {
+          "name": "Jan Wiesenberger",
+          "organisation": "FZI Forschungszentrum Informatik",
+          "funktion": "Vorstand"
+        }
+      ]
+    },
+    {
+      "gruppe": "Kammern, Verbände, Zivilgesellschaften",
+      "unter": null,
+      "spalte": "Organisation",
+      "mitglieder": [
+        {
+          "name": "Dieter Bürk",
+          "organisation": "DGB Stadt- und Kreisverband Karlsruhe",
+          "funktion": "Vorsitzender"
+        },
+        {
+          "name": "Matthias Hornberger",
+          "organisation": "CyberForum e.V.",
+          "funktion": "Vorstandsvorsitzender"
+        },
+        {
+          "name": "Karsten Lamprecht",
+          "organisation": "Handwerkskammer Karlsruhe",
+          "funktion": "Präsident"
+        },
+        {
+          "name": "Frank Roth",
+          "organisation": "IHK Karlsruhe",
+          "funktion": "Präsident"
+        },
+        {
+          "name": "Gert Rudolph",
+          "organisation": "Interconnect GmbH / Bad. Sportbund Nord",
+          "funktion": "Geschäftsführer / Präsident"
+        }
+      ]
+    }
+  ],
+  "gaeste": [
+    {
+      "name": "Frank Mentrup",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Oberbürgermeister"
+    },
+    {
+      "name": "Gabriele Luczak-Schwarz",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Wirtschaftsbürgermeisterin"
+    },
+    {
+      "name": "Tina Döpfert",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Abteilungsleitung Visuelle Kommunikation"
+    },
+    {
+      "name": "Christine Fischer",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Referentin Dezernat 1"
+    },
+    {
+      "name": "Tobias Jüngert",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Leiter Presse- und Informationsamt"
+    },
+    {
+      "name": "Pascal Rastetter",
+      "institution": "Karlsruhe Tourismus GmbH (KTG)",
+      "funktion": "Geschäftsführer"
+    },
+    {
+      "name": "Torben Stieglitz",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Amtsleiter Wirtschaftsförderung"
+    },
+    {
+      "name": "Dominika Szope",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Leiterin Kulturamt"
+    },
+    {
+      "name": "Frank Theurer",
+      "institution": "City Initiative Karlsruhe",
+      "funktion": "Geschäftsführer"
+    }
+  ],
+  "praesidium": [
+    {
+      "name": "Lutz Boden",
+      "rolle": "Vorsitzender",
+      "organisation": "Sparkasse Karlsruhe",
+      "funktion": "Vorstandsmitglied",
+      "gruppe": "Wirtschaft"
+    },
+    {
+      "name": "André Hellmann",
+      "rolle": "Stellvertretender Vorsitzender",
+      "organisation": "netzstrategen GmbH",
+      "funktion": "Geschäftsführer",
+      "gruppe": "Wirtschaft"
+    },
+    {
+      "name": "Joachim Kugler",
+      "rolle": "Mitglied des Präsidiums",
+      "organisation": "Siemens Energy AG",
+      "funktion": "Repräsentant Süddeutschland",
+      "gruppe": "Wirtschaft"
+    },
+    {
+      "name": "Thomas Hirth",
+      "rolle": "Mitglied des Präsidiums",
+      "organisation": "Karlsruher Institut für Technologie (KIT)",
+      "funktion": "Vizepräsident",
+      "gruppe": "Wissenschaft"
+    },
+    {
+      "name": "Frank Roth",
+      "rolle": "Mitglied des Präsidiums",
+      "organisation": "IHK Karlsruhe",
+      "funktion": "Präsident",
+      "gruppe": "Kammern, Verbände, Zivilgesellschaften"
+    }
+  ],
+  "stadtspitze": [
+    {
+      "name": "Frank Mentrup",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Oberbürgermeister"
+    },
+    {
+      "name": "Gabriele Luczak-Schwarz",
+      "institution": "Stadt Karlsruhe",
+      "funktion": "Wirtschaftsbürgermeisterin"
+    }
+  ],
+  "stand": "28.09.2026"
+}
