@@ -68,6 +68,7 @@ Einmalige Einrichtung durch die Entwicklung:
 2. **Build Pack:** `Dockerfile` (liegt im Repo-Root). Port `80`.
 3. **Domain:** `https://strategierat-karlsruhe.de` und `https://www.strategierat-karlsruhe.de`; www per Redirect auf die Hauptdomain. Let's-Encrypt-Zertifikat über Coolify.
 4. **Auto-Deploy** bei Push auf `main` aktivieren. Optional Staging aus `development`.
+   Das Repository muss in der GitHub App `netzstrategen-github` freigegeben sein (Organisation → Settings → GitHub Apps → Repository access). Weil es öffentlich ist, baut Coolify es auch ohne diese Freigabe, bekommt dann aber keine Push-Events, und Auto-Deploy greift nie.
 5. **Proxy-Logs:** Für diese Anwendung keine Zugriffsprotokolle im Coolify-Proxy (Traefik/Caddy) aktivieren. Die Datenschutzerklärung sagt zu, dass keine Server-Protokolle geführt werden.
 
 ### Zugangsschutz bis zum Livegang
