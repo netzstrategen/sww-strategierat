@@ -61,7 +61,7 @@ Farben, Schriften und Logo folgen dem Styleguide v1.0 des Rats (10.10.2026) nach
 - **Grün `#128275` und Fließtext in Tinte `#1C2B33`:** Grün muss auf Weiß 4,5 : 1 erreichen und sich zugleich mit 3 : 1 vom Fließtext abheben. Mit dem früheren Fließtext `#33424A` war das mit keinem Grün möglich, mit Tinte gibt es ein schmales Fenster.
 - **Grün tief `#11796D`** für grüne Schrift auf den hellen Flächen (Karten, Vision, Kontakt), dort hält es 4,5 : 1.
 - **Links im Fließtext sind immer unterstrichen**, damit sie nicht nur an der Farbe erkennbar sind.
-- **Logo:** Dateien unverändert aus dem Logo-Paket vom 09.10.2026 (`public/logo-hell.svg`, `public/logo-dunkel.svg`, `public/favicon.svg`). Im Kopf 56 px hoch, mobil 40 px.
+- **Logo:** Dateien unverändert aus dem Logo-Paket vom 09.10.2026 (`public/logo-hell.svg`, `public/logo-dunkel.svg`, `public/logo-kompakt-*.svg`, `public/favicon.svg`). Im Kopf 56 px hoch; mobil und in der Fußzeile die Kompaktversion, 40 px hoch, weil die Vollversion dort unter ihre Mindestbreite von 200 px fiele.
 
 ## Inhalte ändern
 
