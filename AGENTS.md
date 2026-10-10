@@ -107,14 +107,18 @@ Gitflow. `main` is production; `development` is the integration branch and what 
 
 ## Design
 
-The design follows the council's style guide (SWW Styleguide, Entwurf 3, 29 September 2026), kept outside this repo in the project folder. In code, the tokens live at the top of `src/styles/global.css` (light values on `:root`, dark values under `prefers-color-scheme: dark`).
+The design follows the council's style guide, **SWW Styleguide v1.0 (10 October 2026)**, built after the design review by Michael Wallner (Asana D7, 9 October 2026). The style guide PDF and the logo package live in the project folder outside this repo; the design system „SWW Karlsruhe“ (claude.ai artifact) holds the same rules and tokens. In code, the tokens live at the top of `src/styles/global.css` (light values on `:root`, dark values under `prefers-color-scheme: dark`).
 
 Hard rules:
 
 - Use the tokens. Do not hard-code colours, sizes or spacing.
-- Colours: ink `#1C2B33`, green `#0F6E63`, mint `#8FD3CA`. Mint is never text on white. Green and mint together stay under ten percent of a page.
-- Serif (Caladea) for headlines and key statements, sans (Carlito) for everything else.
-- Logo is direction C, the ampersand. `public/logo-hell.svg` on light, `public/logo-dunkel.svg` on dark, `public/favicon.svg`.
+- Colours: ink `#1C2B33`, which is also the body text colour (`--text`); green `#128275` (`--accent`); green deep `#11796D` (`--accent-deep`) for green text on `--surface` and `--surface-key`; mint `#8FD3CA` (`--mint`, fixed as `--brand-mint` for the badge). Mint is never text on white.
+- Green and mint together stay under 10 % of a screen and under 5 % of a printed page.
+- Why these values: green has to reach 4.5 : 1 on white and stand out from body text by 3 : 1 (WCAG 1.4.1). With body text `#33424A` no green can do both. With body text in ink there is a narrow window, and `#128275` sits in it (4.7 : 1 on white, 3.1 : 1 to ink, hue 173° like the mint). Green deep keeps 4.8 : 1 on `surface` and 4.6 : 1 on `surface-key`; blocks on those surfaces set `--accent:var(--accent-deep)`.
+- Links in running text are always underlined in addition to the colour (`p a, dd a, td a, blockquote a, figcaption a`). Navigation, buttons, tiles, table of contents and footer stay without underline.
+- Header: logo 56 px high (40 px below 760 px), bar at least 80 px, navigation 16 px, the menu never wraps next to the logo; if it does not fit, it moves below the logo as a whole.
+- Serif (Caladea) for headlines and key statements, sans (Carlito) for everything else. Fonts are not changing.
+- Logo is direction C, final since 9 October 2026: badge with the ampersand, „Strategierat“ in Caladea Bold over „WIRTSCHAFT & WISSENSCHAFT“ in Carlito Bold caps. `public/logo-hell.svg` on light, `public/logo-dunkel.svg` on dark, `public/favicon.svg` is the badge (Bildmarke). The files come unchanged from the logo package `2026-10-09_SWW-Logo-C-Paket`: never redraw, recolour or re-set them. Aspect ratio 3.84 : 1. Minimum width 200 px.
 - Focus ring 3px, green on white, mint on ink. Respect `prefers-reduced-motion`.
 - Neutral design: no city branding, no member company branding, no netzstrategen CI.
 
