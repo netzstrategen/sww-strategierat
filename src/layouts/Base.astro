@@ -30,8 +30,9 @@ const stand = '30.09.2026';
 <header class="top">
   <div class="wrap bar">
     <a class="brand" href="/" aria-label="Strategierat Wirtschaft &amp; Wissenschaft Karlsruhe, zur Startseite">
-      <img class="logo-l" width="180" height="34" src="/logo-hell.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft">
-      <img class="logo-d" width="180" height="34" src="/logo-dunkel.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft">
+      <!-- Unter 760 px die Kompaktversion: die Vollversion wäre dort nur 154 px breit, Mindestbreite 200 px (Styleguide v1.0) -->
+      <picture class="logo-l"><source media="(max-width:760px)" srcset="/logo-kompakt-hell.svg" width="199" height="40"><img width="215" height="56" src="/logo-hell.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft"></picture>
+      <picture class="logo-d"><source media="(max-width:760px)" srcset="/logo-kompakt-dunkel.svg" width="199" height="40"><img width="215" height="56" src="/logo-dunkel.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft"></picture>
     </a>
     <nav class="main" aria-label="Hauptnavigation"><ul>
       <li><a href="/" aria-current={current("/")}>Der Rat</a></li>
@@ -49,7 +50,7 @@ const stand = '30.09.2026';
 <footer class="foot inv">
   <div class="wrap">
     <div>
-      <img width="212" height="40" src="/logo-dunkel.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft">
+      <img width="199" height="40" src="/logo-kompakt-dunkel.svg" alt="Strategierat Wirtschaft &amp; Wissenschaft">
       <p class="cap">strategierat-karlsruhe.de · Stand: {stand}</p>
     </div>
     <ul>

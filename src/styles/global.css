@@ -11,8 +11,8 @@ img{max-width:100%}
 /* Layout: Styleguide SWW Entwurf 3, Website. Inhaltsbreite 1120px, Tintenfläche vollflächig nur im Kopfband und in der Fußzeile. */
 :root{
   --ground:#FFFFFF; --surface:#F3F5F6; --surface-key:#EAF2F0; --surface-notice:#FBEFE6;
-  --slab:#1C2B33; --ink:#1C2B33; --text:#33424A; --muted:#5B6B73; --faint:#9AA7AD; --line:#D8DEE1;
-  --accent:#0F6E63; --on-accent:#FFFFFF; --mint:#8FD3CA; --on-inv:#FFFFFF; --on-inv-muted:#9AA7AD;
+  --slab:#1C2B33; --ink:#1C2B33; --text:#1C2B33; --muted:#5B6B73; --faint:#9AA7AD; --line:#D8DEE1;
+  --accent:#128275; --accent-deep:#11796D; --on-accent:#FFFFFF; --mint:#8FD3CA; --brand-mint:#8FD3CA; --on-inv:#FFFFFF; --on-inv-muted:#9AA7AD;
   --key-text:#143A36; --notice-text:#6B3A1E; --bar-2:#33424A; --bar-3:#9AA7AD;
   --show-l:block; --show-d:none;
   --serif:"Caladea","Cambria",Georgia,serif; --sans:"Carlito","Calibri","Segoe UI",Arial,sans-serif;
@@ -21,12 +21,12 @@ img{max-width:100%}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --ground:#141F25; --surface:#1F2E36; --surface-key:#17332F; --surface-notice:#3A2A20;
   --slab:#0B1216; --ink:#F3F5F6; --text:#D8DEE1; --muted:#A9B6BB; --faint:#8A979E; --line:#33424A;
-  --accent:#8FD3CA; --on-accent:#1C2B33; --key-text:#CDEDE8; --notice-text:#F6D9C6; --bar-2:#D8DEE1; --bar-3:#5B6B73;
+  --accent:#8FD3CA; --accent-deep:#8FD3CA; --on-accent:#1C2B33; --key-text:#CDEDE8; --notice-text:#F6D9C6; --bar-2:#D8DEE1; --bar-3:#5B6B73;
   --show-l:none; --show-d:block; color-scheme:dark}}
 :root[data-theme="dark"]{
   --ground:#141F25; --surface:#1F2E36; --surface-key:#17332F; --surface-notice:#3A2A20;
   --slab:#0B1216; --ink:#F3F5F6; --text:#D8DEE1; --muted:#A9B6BB; --faint:#8A979E; --line:#33424A;
-  --accent:#8FD3CA; --on-accent:#1C2B33; --key-text:#CDEDE8; --notice-text:#F6D9C6; --bar-2:#D8DEE1; --bar-3:#5B6B73;
+  --accent:#8FD3CA; --accent-deep:#8FD3CA; --on-accent:#1C2B33; --key-text:#CDEDE8; --notice-text:#F6D9C6; --bar-2:#D8DEE1; --bar-3:#5B6B73;
   --show-l:none; --show-d:block; color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -36,6 +36,8 @@ body{background:var(--ground);color:var(--text);font:400 18px/28px var(--sans);-
 .wrap{max-width:calc(var(--w) + 64px);margin:0 auto;padding-inline:32px}
 @media (max-width:640px){.wrap{padding-inline:16px}}
 a{color:var(--accent);text-underline-offset:3px}
+/* Links im Fließtext immer unterstrichen, nicht nur farbig (WCAG 1.4.1). Navigation, Schaltflächen, Kacheln, Verzeichnis und Fußzeile bleiben ohne. */
+p a,dd a,td a,blockquote a,figcaption a{text-decoration:underline;text-decoration-thickness:1px}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
 .inv :focus-visible{outline-color:var(--mint)}
 h1,h2,h3{font-family:var(--serif);color:var(--ink);text-wrap:balance;margin:0;overflow-wrap:break-word;hyphens:auto}
@@ -47,14 +49,15 @@ p{margin:0}
 
 /* Kopf */
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--ground);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px;flex-wrap:wrap;padding-block:10px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:80px;flex-wrap:wrap;padding-block:10px}
 .brand{display:block;line-height:0}
-.brand img{height:34px;width:auto}
-nav.main ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
-nav.main a{display:block;padding:8px 12px;font:700 15px/22px var(--sans);color:var(--text);text-decoration:none;border-radius:4px}
+.brand img{height:56px;width:auto}
+nav.main{flex:0 0 auto}
+nav.main ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:nowrap}
+nav.main a{display:block;padding:8px 12px;font:700 16px/22px var(--sans);color:var(--text);text-decoration:none;border-radius:4px}
 nav.main a:hover{color:var(--accent)}
 nav.main a[aria-current="page"]{color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent);border-radius:0}
-@media (max-width:760px){.bar{gap:4px}.brand img{height:28px}nav.main{width:100%;overflow-x:auto;margin-inline:-12px}nav.main ul{flex-wrap:nowrap}}
+@media (max-width:760px){.bar{gap:4px}.brand img{height:40px}nav.main{width:100%;overflow-x:auto;margin-inline:-12px}nav.main ul{flex-wrap:nowrap}}
 
 /* Seiten */
 .page[hidden]{display:none}
@@ -71,7 +74,7 @@ h2{font-size:32px;line-height:40px;margin-bottom:12px}
 .hero h1{color:var(--on-inv);font-size:48px;line-height:56px;max-width:15em}
 .hero .lead{color:var(--on-inv-muted);margin-top:20px;max-width:34em}
 .hero .kern{margin-top:28px;padding-left:20px;border-left:3px solid var(--mint);font:400 21px/30px var(--serif);color:var(--on-inv);max-width:34em}
-.plakette{width:220px;height:220px;border-radius:50%;background:var(--mint);color:#1C2B33;display:grid;place-items:center}
+.plakette{width:220px;height:220px;border-radius:50%;background:var(--brand-mint);color:#1C2B33;display:grid;place-items:center}
 .plakette .amp{width:100%;height:100%}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
 .btn{display:inline-block;padding:12px 20px;font:700 15px/22px var(--sans);text-decoration:none;border-radius:4px}
@@ -96,6 +99,8 @@ h2{font-size:32px;line-height:40px;margin-bottom:12px}
 
 /* Vision */
 .vision{background:var(--surface-key)}
+/* Grüne Schrift auf hellen Flächen: Grün tief hält 4,5 : 1 auf surface und surface-key */
+.card,.vision,.mono,.contact{--accent:var(--accent-deep)}
 .vision blockquote{margin:0;font:400 32px/44px var(--serif);color:var(--key-text);max-width:30em;text-wrap:pretty}
 .vision .over{color:var(--key-text)}
 @media (max-width:640px){.vision blockquote{font-size:24px;line-height:34px}}
