@@ -3,7 +3,8 @@
 Website des **Strategierats Wirtschaft & Wissenschaft Karlsruhe**. Die Seite stellt den Rat vor und veröffentlicht Leitbild, Satzung und die Zusammensetzung des Gremiums.
 
 - **Produktion:** https://strategierat-karlsruhe.de
-- **Verantwortlich (Inhalt und Impressum):** André Hellmann, stellvertretender Vorsitzender des Präsidiums
+- **Anbieter (Impressum):** der Strategierat als nicht eingetragener Verein (§ 54 BGB), vertreten durch Lutz Boden (Vorsitzender des Präsidiums) und André Hellmann (stellvertretender Vorsitzender). So eingeordnet von den Juristen der Sparkasse Karlsruhe am 22.10.2026; daraus folgen die Pflichtangaben nach § 5 DDG einschließlich Rechtsform-Zusatz und Telefonnummer.
+- **Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV):** André Hellmann
 - **Hosting:** Coolify auf dem netzstrategen-Server (Deutschland)
 - **Tier:** Production
 
