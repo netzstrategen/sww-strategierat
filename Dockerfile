@@ -8,7 +8,9 @@ COPY . .
 RUN npm run build
 
 # Stufe 2: mit nginx ausliefern, ohne Zugriffsprotokolle (siehe Datenschutzerklärung)
-FROM nginx:1.27-alpine
+# Auf eine Patch-Version gepinnt: ein schwebendes Tag holt Sicherheitsupdates nicht von selbst,
+# der Build-Cache behält, was es beim letzten Mal bedeutete. 1.30.7 ist das Sicherheitsrelease vom 18.11.2026.
+FROM nginx:1.30.7-alpine
 # htpasswd für den optionalen Zugangsschutz (siehe docker/40-basic-auth.sh)
 RUN apk add --no-cache apache2-utils
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
